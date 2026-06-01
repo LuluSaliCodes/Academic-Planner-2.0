@@ -48,6 +48,18 @@ p {
     color: rgba(255, 255, 255, 0.8);
 }
 
+.next-btn {
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+
+    text-align: center;
+    font-size: 31px;
+    color: rgba(255, 255, 255, 0.8);
+
+    width: 40px;
+    height: 40px;
+}
+
 #course-input {
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
