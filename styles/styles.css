@@ -24,12 +24,14 @@ nav {
     display: flex;
     justify-content: center;
 
-    color: white;
+    color: rgb(182, 214, 241);
+    font-size: 20px;
 }
 
 aside {
     grid-area: sidebar;
     border: 2px solid white;
+    border-radius: 20px;
 
     height: 100vh;
     display: flex;
@@ -39,11 +41,10 @@ aside {
 
 main {
     grid-area: main;
-    border: 2px solid white;
 
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1.5fr;
     grid-template-areas:
     "courses-grid pomodoro"
     "courses-grid calendar"
@@ -59,20 +60,22 @@ main {
 
 .courses-grid{
     grid-area: courses-grid;
-    border: 2px solid white; 
 }
 
 .pomodoro {
     grid-area: pomodoro;
     border: 2px solid white;
+    border-radius: 20px;
 }
 
 .calendar {
     grid-area: calendar;
     border: 2px solid white;
+    border-radius: 20px;
 }
 
 .deadlines {
     grid-area: deadlines;
     border: 2px solid white;
+    border-radius: 20px;
 }
