@@ -3,6 +3,8 @@ body {
     https://www.reddit.com/r/wallpaper/comments/p25tjt/anime_girl_1920x1080/*/
     background-image: url('../images/Anime_School_Girl.webp');
     background-size: cover;
+
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .container {
@@ -19,11 +21,21 @@ body {
 nav {
     grid-area: navbar;
     border: 2px solid white;
+
+    display: flex;
+    justify-content: center;
+
+    color: white;
 }
 
 aside {
     grid-area: sidebar;
     border: 2px solid white;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -34,6 +46,5 @@ main {
 .side-links {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 10px;
 }
