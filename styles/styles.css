@@ -4,3 +4,36 @@ body {
     background-image: url('../images/Anime_School_Girl.webp');
     background-size: cover;
 }
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "sidebar navbar"
+    "sidebar courses-grid";
+    gap: 20px;
+}
+
+nav {
+    grid-area: navbar;
+    border: 2px solid white;
+}
+
+aside {
+    grid-area: sidebar;
+    border: 2px solid white;
+}
+
+main {
+    grid-area: courses-grid;
+    border: 2px solid white;
+}
+
+.side-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
