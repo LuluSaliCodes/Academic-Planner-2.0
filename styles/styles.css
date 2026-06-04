@@ -14,7 +14,7 @@ body {
     grid-template-rows: auto 1fr;
     grid-template-areas: 
     "sidebar navbar"
-    "sidebar courses-grid";
+    "sidebar main";
     gap: 20px;
 }
 
@@ -39,12 +39,39 @@ aside {
 }
 
 main {
-    grid-area: courses-grid;
+    grid-area: main;
     border: 2px solid white;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "courses-grid pomodoro"
+    "courses-grid calendar"
+    "courses-grid deadlines";
 }
 
 .side-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.courses-grid{
+    grid-area: courses-grid;
+    border: 2px solid white; 
+}
+
+.pomodoro {
+    grid-area: pomodoro;
+    border: 2px solid white;
+}
+
+.calendar {
+    grid-area: calendar;
+    border: 2px solid white;
+}
+
+.deadlines {
+    grid-area: deadlines;
+    border: 2px solid white;
 }
