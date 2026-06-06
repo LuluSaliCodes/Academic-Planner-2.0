@@ -22,8 +22,18 @@
             </aside>
             <main>
                 <div class="courses-grid">
-                    <div id="add-course-card">
-                        <p>+</p>
+                    <button id="add-course-btn" class="add-course">
+                        +
+                    </button>
+
+                    <div id="modal-overlay" class="hidden">
+                        <div class="modal">
+                            <h2>Add Course</h2>
+
+                            <input type="text" placeholder="Course name">
+
+                            <button id="close-modal">Add</button>
+                        </div>
                     </div>
                 </div>
                 <div class="pomodoro">
