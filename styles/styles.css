@@ -58,8 +58,25 @@ main {
     gap: 10px;
 }
 
-.courses-grid{
+.courses-grid {
     grid-area: courses-grid;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#add-course-card {
+    border: 2px solid white;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+    color: white;
 }
 
 .pomodoro {
