@@ -3,7 +3,7 @@ let courses = [];
 export function addCourse(name) {
     const course = {
         id: courses.length + 1,
-        name,
+        name: name,
         tasks: []
     };
 
