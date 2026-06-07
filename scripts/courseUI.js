@@ -9,7 +9,22 @@ export function initializeCourseForm() {
         e.preventDefault();
 
         addCourse(courseInput.value);
-    });
+        createCourseCard(courseInput.value);
 
-    console.log(getCourses());
+        courseInput.value = "";
+
+        console.log(getCourses()); //db
+    }); 
+}
+
+function createCourseCard(courseName) {
+    const coursesGrid = document.querySelector(".courses-grid");
+    const newCourseDiv = document.createElement("div");
+    newCourseDiv.classList.add("course-card");
+    
+    const cardHeader = document.createElement("h2");
+    cardHeader.textContent = courseName;
+
+    newCourseDiv.appendChild(cardHeader);
+    coursesGrid.appendChild(newCourseDiv);
 }

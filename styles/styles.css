@@ -82,6 +82,17 @@ main {
     cursor: pointer;
 }
 
+.course-card {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    color: white;   
+}
+
 #modal-overlay.hidden {
     display: none;
 }
