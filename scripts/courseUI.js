@@ -22,8 +22,10 @@ function createCourseCard(courseName) {
     const newCourseDiv = document.createElement("div");
     newCourseDiv.classList.add("course-card");
     
-    const cardHeader = document.createElement("h2");
+    const cardHeader = document.createElement("a");
     cardHeader.textContent = courseName;
+
+    cardHeader.href = `course.html?course=${encodeURIComponent(courseName)}`;
 
     newCourseDiv.appendChild(cardHeader);
     coursesGrid.appendChild(newCourseDiv);

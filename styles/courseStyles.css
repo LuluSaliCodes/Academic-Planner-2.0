@@ -1,0 +1,8 @@
+body {
+    /*Reference for Wallpaper: (url)
+    https://www.reddit.com/r/wallpaper/comments/p25tjt/anime_girl_1920x1080/*/
+    background-image: url('../images/Anime_School_Girl.webp');
+    background-size: cover;
+
+    font-family: 'Courier New', Courier, monospace;
+}
