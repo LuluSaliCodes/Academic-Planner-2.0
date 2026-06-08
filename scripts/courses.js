@@ -11,6 +11,10 @@ export function addCourse(name) {
     saveCourses();
 }
 
+export function addCourseObject(courseObject) {
+    courses.push(courseObject);
+}
+
 export function getCourses() {
     return courses;
 }

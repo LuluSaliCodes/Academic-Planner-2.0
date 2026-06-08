@@ -1,3 +1,4 @@
+import { addCourseObject } from "./courses.js";
 import { addCourse } from "./courses.js";
 import { getCourses } from "./courses.js";
 
@@ -5,8 +6,8 @@ export function renderCourses() {
     if (localStorage.getItem("savedCourses")) {
         const courses = JSON.parse(
             localStorage.getItem("savedCourses")) || [];
-        //console.log(courses); //db
         for (const item of courses) {
+            addCourseObject(item); 
             createCourseCard(item.name);
         }
     }
@@ -23,8 +24,6 @@ export function initializeCourseForm() {
         createCourseCard(courseInput.value);
 
         courseInput.value = "";
-
-        console.log(getCourses()); //db
     }); 
 }
 
