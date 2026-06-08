@@ -8,8 +8,13 @@ export function addCourse(name) {
     };
 
     courses.push(course);
+    saveCourses();
 }
 
 export function getCourses() {
     return courses;
+}
+
+function saveCourses() {
+    localStorage.setItem("savedCourses", JSON.stringify(courses));
 }
