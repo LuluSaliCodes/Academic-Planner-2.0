@@ -29,14 +29,16 @@ export function initializeCourseForm() {
 
 function createCourseCard(courseName) {
     const coursesGrid = document.querySelector(".courses-grid");
+    const addCourseBtn = document.getElementById("add-course-btn");
     const newCourseDiv = document.createElement("div");
+    
     newCourseDiv.classList.add("course-card");
     
     const cardHeader = document.createElement("a");
     cardHeader.textContent = courseName;
-
     cardHeader.href = `course.html?course=${encodeURIComponent(courseName)}`;
 
     newCourseDiv.appendChild(cardHeader);
-    coursesGrid.appendChild(newCourseDiv);
+    //coursesGrid.appendChild(newCourseDiv);
+    coursesGrid.insertBefore(newCourseDiv, addCourseBtn);
 }
