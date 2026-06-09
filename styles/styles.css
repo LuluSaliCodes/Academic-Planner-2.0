@@ -8,17 +8,17 @@ body {
 }
 
 a:link {
-  color: white;          /* Sets your custom default link colour */
-  text-decoration: none;   /* Removes the default underline */
+  color: white;
+  text-decoration: none;
 }
 
 a:visited {
-  color: white;          /* Keeps the same colour after being clicked */
-  text-decoration: none;   /* Ensures underline stays gone */
+  color: white;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #b4e0ff;          /* Changes colour slightly when hovered */
+  color: #b4e0ff;
 }
 
 .container {
@@ -108,7 +108,11 @@ main {
     display: flex;
     justify-content: center;
 
-    color: white;   
+    color: white;
+    
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(6px);
 }
 
 #modal-overlay.hidden {
