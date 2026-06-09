@@ -7,6 +7,20 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+a:link {
+  color: white;          /* Sets your custom default link colour */
+  text-decoration: none;   /* Removes the default underline */
+}
+
+a:visited {
+  color: white;          /* Keeps the same colour after being clicked */
+  text-decoration: none;   /* Ensures underline stays gone */
+}
+
+a:hover {
+  color: #b4e0ff;          /* Changes colour slightly when hovered */
+}
+
 .container {
     min-height: 100vh;
     display: grid;

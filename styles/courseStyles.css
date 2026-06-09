@@ -7,6 +7,20 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b4e0ff;
+}
+
 .course-container {
     min-height: 100vh;
     display: grid;
