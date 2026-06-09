@@ -15,6 +15,10 @@ export function addCourseObject(courseObject) {
     courses.push(courseObject);
 }
 
+export function removeCourse() {
+
+}
+
 export function getCourses() {
     return courses;
 }

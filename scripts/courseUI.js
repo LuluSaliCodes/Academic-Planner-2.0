@@ -39,6 +39,5 @@ function createCourseCard(courseName) {
     cardHeader.href = `course.html?course=${encodeURIComponent(courseName)}`;
 
     newCourseDiv.appendChild(cardHeader);
-    //coursesGrid.appendChild(newCourseDiv);
     coursesGrid.insertBefore(newCourseDiv, addCourseBtn);
 }
