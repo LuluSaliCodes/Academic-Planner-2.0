@@ -1,13 +1,35 @@
-const timer = {
-    duration: 25 * 60 * 1000, //1000 is because Date.now() returns time in milliseconds
-    startTime: null
-}
+export class PomodoroTimer {
+    constructor(duration = 25 * 60 * 1000) {
+        this.duration = duration;
+        this.startTime = null;
+        this.intervalId = null;
+    }
 
-export function startTimer() {
-    timer.startTime = Date.now();
-}
+    start(onTick, onComplete) {
+        this.startTime = Date.now();
 
-export function updateTimeDisplay() {
-    const elapsed = Date.now() - timer.startTime;
-    const remaining = timer.duration - elapsed;
+        this.intervalId = setInterval(() => {
+            const remaining = this.getRemainingTime();
+
+            onTick(remaining);
+
+            if (remaining <= 0) {
+                this.stop();
+
+                if (onComplete) {
+                    onComplete();
+                }
+            }
+        }, 1000);
+    }
+
+    stop() {
+        clearInterval(this.intervalId);
+        this.intervalId = null;
+    }
+
+    getRemainingTime() {
+        const elapsed = Date.now() - this.startTime;
+        return Math.max(0, this.duration - elapsed);
+    }
 }
