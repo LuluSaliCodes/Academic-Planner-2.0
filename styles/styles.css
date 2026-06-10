@@ -151,8 +151,74 @@ main {
 
 .pomodoro {
     grid-area: pomodoro;
+
     border: 2px solid white;
     border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+#timer-display {
+    font-size: 20px;
+}
+
+.controls {
+    display: flex;
+    gap: 40px;
+}
+
+#start-btn {
+    border-radius: 30px;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0px 13px;
+
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    
+
+    color: white;
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+#pause-btn {
+    border-radius: 30px;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0px 13px;
+
+
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    
+
+    color: white;
+    font-size: 12px;
+    
+    cursor: pointer;
+}
+
+#stop-btn {
+    border-radius: 30px;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0px 13px;
+
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    
+
+    color: white;
+    font-size: 12px;
+    
+    cursor: pointer;
 }
 
 .calendar {
