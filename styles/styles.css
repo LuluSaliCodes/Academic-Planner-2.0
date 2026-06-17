@@ -205,7 +205,7 @@ main {
     cursor: pointer;
 }
 
-#stop-btn {
+#reset-btn {
     border-radius: 30px;
     border: 1px solid white;
     background: rgba(0, 0, 0, 0.15);

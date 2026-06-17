@@ -4,7 +4,7 @@ export function initializePomodoro() {
     const display = document.getElementById("timer-display");
     const startBtn = document.getElementById("start-btn");
     const pauseBtn = document.getElementById("pause-btn");
-    const resetBtn = document.getElementById("stop-btn");
+    const resetBtn = document.getElementById("reset-btn");
 
 
     const timer = new PomodoroTimer();
