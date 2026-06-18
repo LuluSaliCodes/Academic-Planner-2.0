@@ -23,7 +23,7 @@ export function initializePomodoro() {
     });
 
     resetBtn.addEventListener("click", () => {
-        timer.stop();
+        timer.reset();
         display.textContent = "25:00";
     });
 }
