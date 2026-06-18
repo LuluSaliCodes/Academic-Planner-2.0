@@ -18,11 +18,12 @@ export class PomodoroTimer {
         this.intervalId = setInterval(() => {
 
             const elapsed = Date.now() - this.startTime;
-            const remaining = this.remainingTime - elapsed;
+            this.remainingTime -= elapsed;
+            this.startTime = Date.now();
 
-            onTick(Math.max(0, remaining));
+            onTick(Math.max(0, this.remainingTime));
 
-            if (remaining <= 0) {
+            if (this.remainingTime <= 0) {
                 this.stop();
                 this.remainingTime = 0;
 
@@ -30,15 +31,13 @@ export class PomodoroTimer {
                     onComplete();
                 }
             }
-        }, 1000);
+        }, 250);
     }
 
     stop() {
         if (!this.isRunning) return;
 
         clearInterval(this.intervalId);
-        const elapsed = Date.now() - this.startTime;
-        this.remainingTime -= elapsed;
         this.isRunning = false;
     }
 
